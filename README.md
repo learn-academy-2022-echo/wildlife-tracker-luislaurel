@@ -124,11 +124,42 @@ Hint: An animal has_many sightings (rails g resource Sighting animal_id:integer 
 Hint: Date is written in Active Record as yyyy-mm-dd (“2022-07-28")
 date:YYMMDD
 Can create a new animal sighting in the database
-
+```ruby
+ def create 
+        animal = Animal.find(params[:sighting][:animal_id])
+        sighting = animal.sightings.create(sighting_params)
+        if sighting.valid?
+            render json: sighting
+        else
+            render json: sighting.errors
+        end 
+    end
+```
 Can update an existing animal sighting in the database
+
+ ```ruby
+  def update
+        sighting = Sighting.find(params[:id])
+        sighting.update(sighting_params)
+        if sighting.valid?
+            render json: sighting
+          else
+            render json: sighting.errors
+        end
+    end
+```
 Can remove an animal sighting in the database
 
-
+```ruby
+ def destroy
+        sighting = Sighting.find(params[:id])
+        if sighting.destroy
+            render json: sighting
+        else 
+            render json: sighting.errors
+        end
+    end
+```
 
 
 
