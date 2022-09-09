@@ -1,34 +1,27 @@
-<!-- Setup -->
-cd Desktop
-rails new wildlife_api -d postgresql - T
-cd wildlife_api
-rails db:create
-git remote add
-code .
-git status
-git add .
-git commit -m
-git push origin main
-bundle add rspec-rails
-rails g rspec:install
-rails s
+# README
 
-rails generate resource Animal common_name:string scientific_binomial:string
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-rail routes -E
-rails db:migrate
-delete views folder
+Things you may want to cover:
 
+* Ruby version
 
-skip_before_action :verify_authenticity_token add to application_controller.rb
-<!-- End Setup -->
+* System dependencies
 
+* Configuration
 
+* Database creation
 
+* Database initialization
 
+* How to run the test suite
 
+* Services (job queues, cache servers, search engines, etc.)
 
+* Deployment instructions
 
+<<<<<<< HEAD
 Story 1: In order to track wildlife sightings, as a user of the API, I need to manage animals.
 
 Branch: animal-crud-actions
@@ -257,3 +250,6 @@ Indian Python (Ajgar)
 Python molurus
  "common_name": "Indian Python",
     "scientific_binomial": "Python molurus"
+=======
+* ...
+>>>>>>> main
