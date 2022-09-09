@@ -94,7 +94,46 @@ def destroy
     end
 
 ```
+<!-- End of Story 1 -->
 
+
+<!-- Start Story 2 -->
+
+
+
+git checkout -b sighting-crud-actions
+
+
+Story 2: In order to track wildlife sightings, as a user of the API, I need to manage animal sightings.
+
+Branch: sighting-crud-actions
+
+Acceptance Criteria
+
+Create a resource for animal sightings with the following information: latitude, longitude, date
+
+<!-- Setup / Create Associations -->
+
+
+rails generate resource Sighting animal_id:integer latitude:float longitude:float date:date
+
+<!-- class Sighting < ApplicationRecord
+    belongs_to :animal
+end
+
+class Animal < ApplicationRecord
+    has_many :sightings
+end -->
+
+
+
+Hint: An animal has_many sightings (rails g resource Sighting animal_id:integer ...)
+Hint: Date is written in Active Record as yyyy-mm-dd (“2022-07-28")
+date:YYMMDD
+Can create a new animal sighting in the database
+
+Can update an existing animal sighting in the database
+Can remove an animal sighting in the database
 
 
 
@@ -182,5 +221,39 @@ Buffalo
 
 Babalus bubalis
 
+ "common_name": "Buffalo",
+    "scientific_binomial": "Babalus bubalis"
+Bulbul
 
+Molpastes cafer
 
+Koel
+
+Eudynamis scolopaccus
+
+Pigeon
+
+Columba livia
+ "common_name": "Pigeon",
+    "scientific_binomial": "Columba livia"
+
+Indian Cobra
+
+Naja naja
+
+King cobra
+
+Ophiophagus hannah
+
+    "common_name": "King Cobra",
+    "scientific_binomial": "Ophiophagus hannah"
+Sea snake
+
+Hydrophiinae
+    "common_name": "Sea snake",
+    "scientific_binomial": "Hydrophiinae"
+Indian Python (Ajgar)
+
+Python molurus
+ "common_name": "Indian Python",
+    "scientific_binomial": "Python molurus"
