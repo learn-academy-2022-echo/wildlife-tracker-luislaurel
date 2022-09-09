@@ -64,5 +64,3 @@ group :development do
   # gem "spring"
 end
 
-
-gem "rspec-rails", "~> 5.1"
